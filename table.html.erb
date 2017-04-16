@@ -1,18 +1,13 @@
-  <tr>
-    <td class="id"><%= table.headers[0] %></tb>
-    <td class="first_name"><%= table.headers[1] %></tb>
-    <td class="last_name"><%= table.headers[2] %></tb>
-    <td class="email"><%= table.headers[3] %></tb>
-    <td class="gender"><%= table.headers[4] %></tb>
-    <td class="ip_address"><%= table.headers[5] %></tb>
-  </tr>
+<tr>
+  <% table.headers.each do |head| %>
+    <td><%= head %></td>
+  <% end %>
+</tr>
+
   <% table.each do |data| %>
     <tr>
-      <td class="id"><%= data[0] %></tb>
-      <td class="first_name"><%= data[1] %></tb>
-      <td class="last_name"><%= data[2] %></tb>
-      <td class="email"><%= data[3] %></tb>
-      <td class="gender"><%= data[4] %></tb>
-      <td class="ip_address"><%= data[5] %></tb>
+    <% data.each do |dt| %>
+      <td><%= dt[1] %></td>
+    <% end %>
     </tr>
   <% end %>

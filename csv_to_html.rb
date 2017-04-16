@@ -11,12 +11,7 @@ if ARGV[1] == nil
 else
   export = ARGV[1]
 end
-
-
-
 File.open(export, "w") do |file|
   file.puts result
 end
-table.headers.each do |head|
-  puts head
-end
+puts date.to_s + "のレポートが生成されました"
